@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Recipe } from './recipe.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class RecipeService {
+  private recipes: Recipe[] = [
+    new Recipe(
+      'A Test Recipe',
+      'This is simple recipe',
+      'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'),
+    new Recipe(
+      'Another Test Recipe',
+      'This is another simple recipe',
+      'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg'),
+  ];
 
-  constructor() { }
+  getRecipes() {
+    return this.recipes.slice();
+  }
 }
