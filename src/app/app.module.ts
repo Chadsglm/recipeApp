@@ -58,6 +58,9 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
       useClass: AuthInterceptorService,
       multi: true
     }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class AppModule { }
