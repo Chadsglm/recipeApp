@@ -8,7 +8,8 @@ import { AuthGuard } from './auth/auth.guard';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' }
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' }
 ];
 
 @NgModule({
