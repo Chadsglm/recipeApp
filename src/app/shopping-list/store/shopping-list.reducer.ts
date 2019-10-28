@@ -59,7 +59,7 @@ export function shoppingListReducer(
       return {
         ...state,
         editedIngredientIndex: action.payload,
-        editedIngredients: { ...state.ingredients[action.payload] }
+        editedIngredient: { ...state.ingredients[action.payload] }
       };
     case ShoppingListActions.STOP_EDIT:
       return {
